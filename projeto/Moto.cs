@@ -17,9 +17,9 @@ namespace projeto
         public override List<string> ObterCheckListObrigatorio()
         {
             List<string> checkList = base.ObterCheckListObrigatorio();
-            checkList.Add("Tacógrafo");
-            checkList.Add("Sistema de Freios a Ar");
-            checkList.Add("Trava e Lona da Caçamba");
+            checkList.Add("Kit Transmissão/Corrente");
+            checkList.Add("Manetes de Freio/Embreagem");
+            checkList.Add("Pezinho Lateral");
             return checkList;
         }
     }
