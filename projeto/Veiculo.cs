@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 namespace projeto
 {
     public abstract class Veiculo
-    {
+    {    
         public string Marca {get; set;}
         public string Modelo {get; set;}
         public int Ano {get; set;}
@@ -33,6 +33,19 @@ namespace projeto
             {"Nível de óleo no motor",
              "Bateria e sistema Elétrico", 
              "Documentação regularizada",};
+        }
+
+        public int CalcularPontuacaoObtida()
+        {
+            int pontuacaoTotal =  0;
+            foreach (ItemVistoria item in this.VistoriaRealizada)
+            {
+                if(item.Status == "Bom"){pontuacaoTotal = pontuacaoTotal+10;}
+                else if(item.Status == "Regular"){pontuacaoTotal = pontuacaoTotal+5;}
+                else if(item.Status == "Ruim"){pontuacaoTotal = pontuacaoTotal+0;}
+                
+            }
+            return pontuacaoTotal;
         }
     }
 }
