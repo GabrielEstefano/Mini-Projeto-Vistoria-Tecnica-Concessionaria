@@ -115,7 +115,12 @@ namespace projeto
 
             Console.WriteLine("\n-------------------------------\n");
             Console.WriteLine($"> AVALIAÇÃO DOS ITENS INSPECIONADOS - {this.VistoriaRealizada.Count} ITENS");
-            foreach(ItemVistoria item in this.VistoriaRealizada){Console.WriteLine($"» {item.Nome} / Status {item.Status}");}
+            foreach(ItemVistoria item in this.VistoriaRealizada)
+            {
+                if(item.Status == "Bom"){Console.WriteLine($"» [OK] {item.Nome} / Status {item.Status} (10 PONTOS)");}
+                else if(item.Status == "Regular"){Console.WriteLine($"» [!] {item.Nome} / Status {item.Status} (5 PONTOS)");}
+                else if(item.Status == "Ruim"){Console.WriteLine($"» {item.Nome} / Status {item.Status} (0 PONTOS)");}
+            }
 
             Console.WriteLine("\n-------------------------------\n");
             Console.WriteLine("> PONTUAÇÃO DO VEÍCULO: \n");
@@ -127,6 +132,6 @@ namespace projeto
             Console.WriteLine($"RELATÓRIO DO VEÍCULO E RECOMENDAÇÕES MECÂNICAS\n");
             Console.WriteLine(this.GerarRecomendacoesOficina());
             Console.WriteLine("\n-------------------------------\n");
-        }
+            }
     }
 }   
