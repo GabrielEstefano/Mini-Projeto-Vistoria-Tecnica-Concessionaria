@@ -66,5 +66,27 @@ namespace projeto
             else if(percentual >= 60){return "Veiculo aprovado com apontamentos.";}
             else {return "Veiculo reprovado.";}
         }
+
+        public List<string> ObterItensCriticos()
+        {
+         List<string> criticos = new List<string>();
+
+         foreach(ItemVistoria item in this.VistoriaRealizada)
+            {
+                if(item.Status=="Ruim"){criticos.Add(item.Nome);}   
+            }
+            return criticos;
+        }
+
+        public List<string> ObterItensAtencao()
+        {
+            List<string> atencao = new List<string>();
+
+            foreach(ItemVistoria item in this.VistoriaRealizada)
+            {
+                if(item.Status=="Regular"){atencao.Add(item.Nome);}    
+            }
+            return atencao;
+        }
     }
 }
