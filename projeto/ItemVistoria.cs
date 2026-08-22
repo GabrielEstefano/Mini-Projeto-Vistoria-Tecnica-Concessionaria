@@ -17,7 +17,7 @@ namespace projeto
                 if(value == "Bom" || value == "Regular" || value =="Ruim")
                 {status = value;}
                 else
-                {throw new ArgumentException("Use apenas: Bom, Regular ou Ruim");}
+                {Console.WriteLine("Use apenas: Bom, Regular ou Ruim.");}
             }
         }
         public ItemVistoria(string nome, string statusObj)

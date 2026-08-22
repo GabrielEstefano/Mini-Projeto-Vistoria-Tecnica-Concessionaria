@@ -47,5 +47,24 @@ namespace projeto
             }
             return pontuacaoTotal;
         }
+
+        public int CalcularPontuacaoMaxima()
+        {return this.VistoriaRealizada.Count*10;}
+
+        public double CalcularPercentualAprovacao()
+        {
+            int obtida = this.CalcularPontuacaoMaxima();
+            int maxima = this.CalcularPontuacaoMaxima();
+            return (double) obtida/maxima*100;
+        }
+
+        public string ClassificarEstado()
+        {
+            double percentual = this.CalcularPercentualAprovacao();
+
+            if(percentual >= 90){return "Veiculo foi aprovado com exelência.";}
+            else if(percentual >= 60){return "Veiculo aprovado com apontamentos.";}
+            else {return "Veiculo reprovado.";}
+        }
     }
 }
