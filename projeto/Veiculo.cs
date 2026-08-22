@@ -106,22 +106,27 @@ namespace projeto
 
         public void ExibirRelatorio()
         {
-            Console.WriteLine("-------------------------------");
+            Console.WriteLine("\n-------------------------------\n");
             Console.WriteLine("> DADOS DO VEÍCULO:\n");
             Console.WriteLine($"» Modelo: {Marca} {Modelo}");
             if(this is Carro carro){Console.WriteLine($"» Quantidade de Portas: {carro.QuantidadeDePortas}");}
             else if(this is Moto moto){Console.WriteLine($"» Cilindradas: {moto.Cilindradas}");}
             else if(this is Caminhao caminhao){Console.WriteLine($"» Quantidade de Eixos {caminhao.QuantidadeDeEixos} Capacidade de Carga (Toneladas): {caminhao.CapacidadeCargaToneladas}");}
 
-            Console.WriteLine("\n-------------------------------");
+            Console.WriteLine("\n-------------------------------\n");
             Console.WriteLine($"> AVALIAÇÃO DOS ITENS INSPECIONADOS - {this.VistoriaRealizada.Count} ITENS");
             foreach(ItemVistoria item in this.VistoriaRealizada){Console.WriteLine($"» {item.Nome} / Status {item.Status}");}
 
-            Console.WriteLine("\n-------------------------------");
+            Console.WriteLine("\n-------------------------------\n");
             Console.WriteLine("> PONTUAÇÃO DO VEÍCULO: \n");
             Console.WriteLine($"» Pontuação Atingida: {this.CalcularPontuacaoObtida()}/{this.CalcularPontuacaoMaxima()}");
             Console.WriteLine($"» Percentual de Aprovação: {this.CalcularPercentualAprovacao():F1}%");
             Console.WriteLine($"» Classificação Final: [ {this.ClassificarEstado} ]");
+
+            Console.WriteLine("\n-------------------------------\n");
+            Console.WriteLine($"RELATÓRIO DO VEÍCULO E RECOMENDAÇÕES MECÂNICAS\n");
+            Console.WriteLine(this.GerarRecomendacoesOficina());
+            Console.WriteLine("\n-------------------------------\n");
         }
     }
 }   
