@@ -115,7 +115,13 @@ namespace projeto
 
             Console.WriteLine("\n-------------------------------");
             Console.WriteLine($"> AVALIAÇÃO DOS ITENS INSPECIONADOS - {this.VistoriaRealizada.Count} ITENS");
-            foreach(ItemVistoria item in this.VistoriaRealizada){Console.WriteLine($"- {item.Nome} / Status {item.Status}");}
+            foreach(ItemVistoria item in this.VistoriaRealizada){Console.WriteLine($"» {item.Nome} / Status {item.Status}");}
+
+            Console.WriteLine("\n-------------------------------");
+            Console.WriteLine("> PONTUAÇÃO DO VEÍCULO: \n");
+            Console.WriteLine($"» Pontuação Atingida: {this.CalcularPontuacaoObtida()}/{this.CalcularPontuacaoMaxima()}");
+            Console.WriteLine($"» Percentual de Aprovação: {this.CalcularPercentualAprovacao():F1}%");
+            Console.WriteLine($"» Classificação Final: [ {this.ClassificarEstado} ]");
         }
     }
 }   
