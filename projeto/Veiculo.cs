@@ -103,5 +103,19 @@ namespace projeto
             }
             return recomendacoes;
         }
+
+        public void ExibirRelatorio()
+        {
+            Console.WriteLine("-------------------------------");
+            Console.WriteLine("> DADOS DO VEÍCULO:\n");
+            Console.WriteLine($"» Modelo: {Marca} {Modelo}");
+            if(this is Carro carro){Console.WriteLine($"» Quantidade de Portas: {carro.QuantidadeDePortas}");}
+            else if(this is Moto moto){Console.WriteLine($"» Cilindradas: {moto.Cilindradas}");}
+            else if(this is Caminhao caminhao){Console.WriteLine($"» Quantidade de Eixos {caminhao.QuantidadeDeEixos} Capacidade de Carga (Toneladas): {caminhao.CapacidadeCargaToneladas}");}
+
+            Console.WriteLine("\n-------------------------------");
+            Console.WriteLine($"> AVALIAÇÃO DOS ITENS INSPECIONADOS - {this.VistoriaRealizada.Count} ITENS");
+            foreach(ItemVistoria item in this.VistoriaRealizada){Console.WriteLine($"- {item.Nome} / Status {item.Status}");}
+        }
     }
 }   
