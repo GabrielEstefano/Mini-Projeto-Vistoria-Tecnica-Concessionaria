@@ -121,7 +121,7 @@ namespace projeto
             {
                 if(item.Status == "Bom"){Console.WriteLine($"» [OK] {item.Nome} / Status {item.Status} (10 PONTOS)");}
                 else if(item.Status == "Regular"){Console.WriteLine($"» [!] {item.Nome} / Status {item.Status} (5 PONTOS)");}
-                else if(item.Status == "Ruim"){Console.WriteLine($"» {item.Nome} / Status {item.Status} (0 PONTOS)");}
+                else if(item.Status == "Ruim"){Console.WriteLine($"» [X] {item.Nome} / Status {item.Status} (0 PONTOS)");}
             }
 
             Console.WriteLine("\n-------------------------------\n");
