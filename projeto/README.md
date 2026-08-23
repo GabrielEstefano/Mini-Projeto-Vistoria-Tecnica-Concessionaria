@@ -55,7 +55,8 @@ Percentual (%) = (Pontuação Obtida / Pontuação Máxima Possível) × 100
 
 ### Link do vídeo explicação:
 ```
-Jájá eu boto
+Google Drive:
+https://drive.google.com/drive/folders/1fmCZ_PTBRPPXl9YnUvbEFZIbfKdeyENS?usp=drive_link
 ```
 
 Codigo escrito por Gabriel Estefano
