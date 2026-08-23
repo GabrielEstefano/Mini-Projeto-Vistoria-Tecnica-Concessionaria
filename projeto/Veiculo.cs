@@ -95,11 +95,11 @@ namespace projeto
             List<string> criticos = this.ObterItensCriticos();
             List<string> atencao = this.ObterItensAtencao();
 
-            if(criticos.Count == 0 && atencao.Count==0){recomendacoes ="Veiculo em bom estado, nenhuma pendência mecânica identificada.";}
+            if(criticos.Count == 0 && atencao.Count==0){recomendacoes ="Veiculo em bom estado, nenhuma pendência mecânica identificada.\n";}
             else
             {
-                foreach(string novoItem in criticos){recomendacoes = recomendacoes+"[X] - "+novoItem+": Precisa de reparo obrigatorio imediato.";}
-                foreach(string novoItem in atencao){recomendacoes = recomendacoes+"[!]- "+novoItem+": Precisa de uma vistoria de precaução";}
+                foreach(string novoItem in criticos){recomendacoes = recomendacoes+"[X] - "+novoItem+": Precisa de reparo obrigatorio imediato.\n";}
+                foreach(string novoItem in atencao){recomendacoes = recomendacoes+"[!]- "+novoItem+": Precisa de uma vistoria de precaução\n";}
             }
             return recomendacoes;
         }
