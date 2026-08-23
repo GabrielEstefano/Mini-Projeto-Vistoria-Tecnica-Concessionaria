@@ -62,7 +62,7 @@ namespace projeto
         {
             double percentual = this.CalcularPercentualAprovacao();
 
-            if(percentual >= 90){return "Veiculo foi aprovado com exelência.";}
+            if(percentual >= 90){return "Veiculo foi aprovado com excelência.";}
             else if(percentual >= 60){return "Veiculo aprovado com apontamentos.";}
             else {return "Veiculo reprovado.";}
         }

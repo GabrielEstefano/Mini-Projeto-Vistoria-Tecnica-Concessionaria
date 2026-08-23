@@ -1,7 +1,7 @@
 ﻿using projeto;
 
 Console.WriteLine("=======================================");
-Console.WriteLine("CONCEISSIONARIA.NET - VISTORIA TECNICA");
+Console.WriteLine("AUTOCHECK.NET - VISTORIA TECNICA");
 Console.WriteLine("=======================================");
 
 List<Veiculo> ListaDeVistorias = new List<Veiculo>();
@@ -10,7 +10,7 @@ int Opcao = 0;
 do
 {
     Console.WriteLine("\nSELECIONE UMA DAS OPÇÕES:");
-    Console.WriteLine("1 - Vistoria Veículo.");
+    Console.WriteLine("1 - Realizar Vistoria.");
     Console.WriteLine("2 - Exibir Vistorias Anteriores.");
     Console.WriteLine("3 - Sair.");
 
