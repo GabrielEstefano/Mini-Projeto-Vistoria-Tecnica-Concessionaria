@@ -53,7 +53,7 @@ namespace projeto
 
         public double CalcularPercentualAprovacao()
         {
-            int obtida = this.CalcularPontuacaoMaxima();
+            int obtida = this.CalcularPontuacaoObtida();
             int maxima = this.CalcularPontuacaoMaxima();
             return (double) obtida/maxima*100;
         }
@@ -126,7 +126,7 @@ namespace projeto
             Console.WriteLine("> PONTUAÇÃO DO VEÍCULO: \n");
             Console.WriteLine($"» Pontuação Atingida: {this.CalcularPontuacaoObtida()}/{this.CalcularPontuacaoMaxima()}");
             Console.WriteLine($"» Percentual de Aprovação: {this.CalcularPercentualAprovacao():F1}%");
-            Console.WriteLine($"» Classificação Final: [ {this.ClassificarEstado} ]");
+            Console.WriteLine($"» Classificação Final: [ {this.ClassificarEstado()} ]");
 
             Console.WriteLine("\n-------------------------------\n");
             Console.WriteLine($"RELATÓRIO DO VEÍCULO E RECOMENDAÇÕES MECÂNICAS\n");
