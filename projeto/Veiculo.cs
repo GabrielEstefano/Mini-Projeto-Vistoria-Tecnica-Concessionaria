@@ -95,7 +95,7 @@ namespace projeto
             List<string> criticos = this.ObterItensCriticos();
             List<string> atencao = this.ObterItensAtencao();
 
-            if(criticos.Count == 0 && atencao.Count==0){recomendacoes ="Veiculo em bom estado   , nenhuma pendência mecânica identificada./n";}
+            if(criticos.Count == 0 && atencao.Count==0){recomendacoes ="Veiculo em bom estado, nenhuma pendência mecânica identificada.";}
             else
             {
                 foreach(string novoItem in criticos){recomendacoes = recomendacoes+"[X] - "+novoItem+": Precisa de reparo obrigatorio imediato.";}
@@ -109,6 +109,8 @@ namespace projeto
             Console.WriteLine("\n-------------------------------\n");
             Console.WriteLine("> DADOS DO VEÍCULO:\n");
             Console.WriteLine($"» Modelo: {Marca} {Modelo}");
+            Console.WriteLine($"» Ano: {Ano}");
+            Console.WriteLine($"» Quilometragem: {Quilometragem}");
             if(this is Carro carro){Console.WriteLine($"» Quantidade de Portas: {carro.QuantidadeDePortas}");}
             else if(this is Moto moto){Console.WriteLine($"» Cilindradas: {moto.Cilindradas}");}
             else if(this is Caminhao caminhao){Console.WriteLine($"» Quantidade de Eixos {caminhao.QuantidadeDeEixos} Capacidade de Carga (Toneladas): {caminhao.CapacidadeCargaToneladas}");}
