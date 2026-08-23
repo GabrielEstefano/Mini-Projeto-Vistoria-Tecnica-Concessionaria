@@ -9,7 +9,7 @@ int Opcao = 0;
 
 do
 {
-    Console.WriteLine("SELECIONE UMA DAS OPÇÕES:");
+    Console.WriteLine("\nSELECIONE UMA DAS OPÇÕES:");
     Console.WriteLine("1 - Vistoria Veículo.");
     Console.WriteLine("2 - Exibir Vistorias Anteriores.");
     Console.WriteLine("3 - Sair.");
@@ -67,7 +67,7 @@ do
             }
 
         ListaDeVistorias.Add(veiculoNovo);
-        Console.WriteLine("Vistodia feita com sucesso!");
+        Console.WriteLine("Vistoria feita com sucesso!");
         break;
 
         case 2:
